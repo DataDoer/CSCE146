@@ -93,16 +93,13 @@ public class GenLinkedList <T>//T is the generic type, so it's every type
 	{
 		if(current != null) //there is  a list
 		{
-			if(current.link == null) //current is at the end of the list; loops back to the beginning
-			{
-				resetCurrent();
-			}
-			else
-			{
 				previous = current;
 				current = current.link;
-			}
 		}
+	}
+	public boolean hasMore()
+	{
+		return current != null;
 	}
 	public void resetCurrent()
 	{
